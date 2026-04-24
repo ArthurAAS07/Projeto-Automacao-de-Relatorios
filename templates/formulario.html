@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card p-4 mx-auto" style="max-width: 500px;">
+    <h3 class="mb-4">Gerar Documento</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label>Nome</label>
+            <input type="text" name="nome" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Idade</label>
+            <input type="number" name="idade" class="form-control">
+        </div>
+
+        <button class="btn btn-primary w-100">
+            Gerar Documento
+        </button>
+    </form>
+</div>
+
+{% endblock %}
